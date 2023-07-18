@@ -27,8 +27,6 @@ function circle(ctx, x, y, r, c, fill = "true") {
 
 function path(ctx, path_data, c = "white", width = 1) {
 
-    const rect = ctx.canvas
-    console.log(rect);
     ctx.strokeStyle = c
     ctx.lineWidth = width
 
