@@ -1,5 +1,5 @@
 import { params } from "./params.js"
-import { fetchCSVFile } from "./csvparse.js"
+import { fetchJSONFile } from "./jsonparse.js"
 import { circle, text, scale, plotPoints } from "./canvas.js"
 
 const speedSlider = document.getElementById('speed');
@@ -15,7 +15,7 @@ async function showView(ctx, name, start = 1) {
 
     var paths = [];
     for (const path of path_data) {
-        const data = await fetchCSVFile(path[0])
+        const data = await fetchJSONFile(path[0])
         paths.push(data)
     }
 
